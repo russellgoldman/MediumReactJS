@@ -100,7 +100,6 @@ class ReactQuiz extends Component {
         this.setState({ answerCorrect: 1 });
       } else {
         this.setState({ answerCorrect: 0 });
-        this.setState({ answerCorrect: 0 });
       }
     }
   }
