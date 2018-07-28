@@ -1,5 +1,5 @@
-import ReactQuiz from './ReactQuiz';
+import ReactQuizContainer from './ReactQuizContainer';
 
 export {
-  ReactQuiz,
+  ReactQuizContainer,
 };
