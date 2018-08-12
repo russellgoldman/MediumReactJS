@@ -5,7 +5,7 @@ import { ContactForm } from './components';
 class Main extends Component {
   render() {
     return (
-      <ContactForm />
+      <ReactQuizContainer />
     );
   }
 }

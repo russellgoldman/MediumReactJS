@@ -123,7 +123,6 @@ class ReactQuiz extends Component {
   }
 
   onFinalResults() {
-    this.onSubmit();
     if (this.state.answerCorrect === 1) {
       this.incrementScore();
     }
