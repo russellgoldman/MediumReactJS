@@ -94,7 +94,7 @@ class ReactQuiz extends Component {
   }
 
   onSubmit() {
-    if (this.state.submitted === false) {
+    if (this.state.submitted === false && this.state.selected != -1) {
       this.setState({ submitted: true });
       if (this.props.quizData[this.state.currentQuestion].choices[this.state.selected] === this.props.quizData[this.state.currentQuestion].answer) {
         this.setState({ answerCorrect: 1 });
