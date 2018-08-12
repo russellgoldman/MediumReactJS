@@ -15,7 +15,7 @@ class MountingUnmounting extends Component {
         mount: !prevState.mount,
       }));
     }, 3000);
-    
+
     if (this.state.mount) {
       return (
         <div>
