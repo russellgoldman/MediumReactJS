@@ -94,7 +94,7 @@ class ReactQuiz extends Component {
   }
 
   onSubmit() {
-    if (this.state.submitted === false && this.state.selected != -1) {
+    if (this.state.submitted === false && this.state.selected !== -1) {
       this.setState({ submitted: true });
       if (this.props.quizData[this.state.currentQuestion].choices[this.state.selected] === this.props.quizData[this.state.currentQuestion].answer) {
         this.setState({ answerCorrect: 1 });
@@ -105,21 +105,19 @@ class ReactQuiz extends Component {
   }
 
   onNextQuestion() {
-    if (this.state.lastQuestion > this.state.currentQuestion) {
-      this.setState((prevState) => ({
-        currentQuestion: prevState.currentQuestion + 1,
-      }));
+    this.setState((prevState) => ({
+      currentQuestion: prevState.currentQuestion + 1,
+    }));
 
-      if (this.state.answerCorrect === 1) {
-        this.incrementScore();
-      }
-
-      // reset some state for next question
-      this.setState({
-        submitted: false,
-        selected: -1,
-      });
+    if (this.state.answerCorrect === 1) {
+      this.incrementScore();
     }
+
+    // reset some state for next question
+    this.setState({
+      submitted: false,
+      selected: -1,
+    });
   }
 
   onFinalResults() {

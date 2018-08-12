@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ReactQuizContainer } from './containers';
-import { ContactForm } from './components';
+import { ContactForm, ComponentDidUpdateExample } from './components';
 
 class Main extends Component {
   render() {
